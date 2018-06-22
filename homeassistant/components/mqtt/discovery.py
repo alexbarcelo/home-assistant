@@ -91,6 +91,6 @@ async def async_start(hass, discovery_topic, hass_config):
             hass, component, platform, payload, hass_config)
 
     await mqtt.async_subscribe(
-        hass, discovery_topic + '/#', async_device_message_received, 0)
+        hass, discovery_topic + '/#/config', async_device_message_received, 0)
 
     return True
